@@ -20,7 +20,6 @@ btnNext.forEach(btn => {
         }
         allItems[i].classList.add("active");
         allItems[i].style.color = "hsl(213, 96%, 18%)";
-        
     });
 });
 
@@ -46,7 +45,6 @@ for (var n = 0; n< card.length; n++) {
         ele.classList.remove("select")
     });
     this.classList.add("select");
-    
   });
 }
 
@@ -59,7 +57,6 @@ document.querySelector('.switch input').addEventListener('change', e => {
     e.target.checked ? yearData() : year.style.color = '#b6b4b4';
     e.target.checked ? month.style.color = '#b6b4b4' : monthData();
 });
-
 
 const yearData = () => {
     const yrData = ['90', '120', '150', '10', '20', '20']
@@ -76,6 +73,7 @@ const monthData = () => {
     p.innerHTML = `$${moData[0]}/mo`;
 }
 
+//h,  how can i change all amount data? 
 
 
 
