@@ -61,19 +61,20 @@ document.querySelector('.switch input').addEventListener('change', e => {
 const yearData = () => {
     const yrData = ['90', '120', '150', '10', '20', '20']
     year.style.color = 'hsla(213, 94%, 25%, 0.842)';
-    let p = document.getElementById('mo');
-    p.innerHTML = `$${yrData[0]}/yr`; 
-    
+    let p = document.querySelectorAll('#mo');
+    p.forEach((paragraph, index) => {
+        paragraph.textContent = `$${yrData[index]}/yr`;
+    });    
 }
 
 const monthData = () => {
     const moData = ['9', '12', '15', '1', '2', '2']
     month.style.color = 'hsla(213, 94%, 25%, 0.842)' ;
-    let p = document.getElementById('mo');
-    p.innerHTML = `$${moData[0]}/mo`;
-}
-
-//h,  how can i change all amount data? 
+    let p = document.querySelectorAll('#mo');
+    p.forEach((paragraph, index) => {
+        paragraph.textContent = `$${moData[index]}/mo`;
+    });
+} 
 
 
 

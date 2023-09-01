@@ -47,13 +47,13 @@ body {
     counter-reset: step;
     transform: translate(-28%);
     transition: .3s ease-in-out;
-    border-radius: 1rem;
+    border-radius: 15px;
 }
 
 .sidebar ul {
     list-style: none;
     position: relative;
-    padding: 0 3rem;
+    padding: 0 1rem;
     align-items: center;
 }
 
@@ -69,9 +69,9 @@ body {
 }
 
  .sidebar ul li {
-    margin-top: 1rem;
-    padding: .3rem 0;
-    padding-left: 2rem;
+    margin-top: .5rem;
+    padding: .05rem 0;
+    margin-left: 3rem;
     align-items: center;
     text-align: left;
 } 
@@ -113,7 +113,7 @@ body {
 }
 
 span {
-    padding-top: 18px;
+    padding-top: 15px;
     color: hsl(232, 12%, 73%);
     font-size: 14px;
     font-weight: 300;
@@ -173,54 +173,65 @@ label {
 .input-grp input {
     display: block;
     width: 80%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 0.35rem;
 }
+.input-grp input::placeholder {
+    font-size: 12px;
+}
 
 .input-grp {
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .form .btn {
-    position: static;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 85px;
+    margin-top: 80px;
     padding: 10px 30px;
 }
 
 .form .btn .btn-next, .btn-submit {
-    width: 23%;
-    padding: 0.7rem;
-    margin-left: 10%;
+    position: absolute;
+    width: 27%;
+    padding: 0.4rem;
+    margin-left: 50%;
     display: block;
     background-color: var(--primary-color);
     color: #f3f3f3;
+    font-size: 14px;
     text-align: center;
     border-radius: 0.6rem;
     border: 1px solid #f3f3f3 ;
     cursor: pointer;
-    transition: .2s;
+}
+
+.form .btn .btn-next:hover, .btn-submit:hover {
+    background-color:  hsla(246, 96%, 11%, 0.918);
+    transition: .3s ease-out;
 }
 
 .form .btn .btn-prev {
-    font-weight: bold;
-    width: 23%;
-    padding: 0.7rem;
-    margin-left: 10%;
+    position: absolute;
+    font-weight: 600;
+    font-size: 14px;
+    width: 27%;
+    padding: 0.4rem;
+    margin-right:50%;
     display: block;
-    color: hsl(231, 11%, 63%);
+    color: var(--primary-color);
     text-align: center;
     border-radius: 0.6rem;
-    border: 1px solid #fff;
+    border: 1px solid #e7e7e7;
     cursor: pointer;
-    transition: .2s;
 }
 
 .btn-prev:hover {
-    color:  hsl(204, 96%, 18%);
+    background-color:  hsla(0, 2%, 78%, 0.658);
+    transition: .3s ease-out;
 }
 
 
@@ -231,11 +242,13 @@ label {
     justify-content: space-around;
     margin: 10px;
     padding-top: 30px;
+    margin-bottom: 5px;
 }
 
 .select {
-    border: 1px solid hsl(204, 96%, 18%);
+    /* border: 1px solid hsl(204, 96%, 18%); */
     background-color: hsla(208, 72%, 93%, 0.747);  
+    transition: .3s ease-in;
 }
 
 .cd {
@@ -252,6 +265,7 @@ label {
 }
 
 .cd:hover {
+    cursor: pointer;
     transition: background 250ms;
     background-color: hsla(208, 72%, 93%, 0.747);
     border: 1px solid hsl(204, 96%, 18%);
@@ -263,7 +277,7 @@ label {
 
 .txt h5{
     color: hsla(213, 94%, 25%, 0.842);
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -279,7 +293,7 @@ label {
     height: 6vh;
     margin: 10px;
     margin-top: 48px;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     border: 1px solid #e2dfdf;
     background: #faf9f9ee;
 }
@@ -301,12 +315,12 @@ label {
     justify-content: space-around;
     margin: 10px;
     padding-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .cd2 {
     width: 90%;
-    height: 5.5vh;
+    height: 5vh;
     margin: 10px;
     padding: 18px;
     border-radius: 0.5rem;
@@ -318,14 +332,15 @@ label {
 }
 
 .cd2:hover {
+    cursor: pointer;
     transition: background 250ms;
     background-color: hsla(208, 72%, 93%, 0.747);
     border: 1px solid hsl(204, 96%, 18%);
 }
 
- input:checked {
-    color: #fff;
-    background-color: hsl(204, 96%, 18%);
+.cd2 input::-moz-range-progress {
+    /* color: #fff; */
+    color: hsl(204, 96%, 18%);
 }
 
 .txt2 {
@@ -338,7 +353,7 @@ label {
 
 .txt2 h5{
     color: hsla(213, 94%, 25%, 0.842);
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 2px;
 }
@@ -361,7 +376,7 @@ label {
     justify-content: space-around;
     margin: 10px;
     padding-top: 30px;
-    margin-bottom: 123px;
+    margin-bottom: 115px;
 
 }
 
@@ -403,14 +418,13 @@ label {
 }
 
 
-/* endd */
+/* thanks */
 .thanks {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 6rem;
-    /* margin: 3rem; */
+    margin-top: 3rem;
     padding: 2rem;
     align-items: center;
     text-align: center;
@@ -419,8 +433,8 @@ label {
     padding: 1rem;
 }
 .thanks p {
-    padding: .3rem;
-    color: #858282;
+    padding: .1rem;
+    color: #727272;
 }
 
 /* toggle button */
@@ -428,7 +442,7 @@ label {
     position: relative;
     display: inline-block;
     width: 53px;
-    height: 40px;
+    height: 25px;
   }
   
 .switch input { 
@@ -439,32 +453,37 @@ height: 0;
   
 .slider {
 position: absolute;
+display: flex;
+justify-content: center;
 cursor: pointer;
+height: 28%;
 top: 1;
 left: 0;
 right: 0;
 bottom: 0;
 background-color: hsl(204, 96%, 18%)cc;
 -webkit-transition: .4s;
-transition: .4s;
+transition: .3s;
 }
   
 .slider:before {
 position: absolute;
+align-items: center;
 content: "";
-height: 17px;
-width: 18px;
-top: 1px;
+height: 16px;
+width: 16px;
+top: 0px;
 left: 5px;
-bottom: 4px;
+bottom: 3px;
 background-color: white;
 -webkit-transition: .4s;
-transition: .4s;
+transition: .3s;
+margin: 3px;
 }
   
 .slider {
     background-color: hsl(204, 96%, 18%);
-  }
+}
   
 input:focus + .slider {
 box-shadow: 0 0 1px hsl(204, 96%, 18%);
@@ -478,7 +497,7 @@ transform: translateX(24px);
   
 /* Rounded sliders */
 .slider.round {
-border-radius: 34px;
+border-radius: 30px;
 }
 
 .slider.round:before {
@@ -486,37 +505,46 @@ border-radius: 50%;
 }
 
 .attribution {
-    margin: 50px 30px;
+    top: 83%;
+    right: 30%;
+    position: absolute;
+    margin: 100px 20px;
+}
+
+.attribution p{
+   font-size: 14px;
 }
 
 @media screen and (max-width:1260px) {
     .form {
         width:35vw;
     }
-
+    .attribution {
+        top: 88%;
+    }
 }
 
 @media screen and (max-width:1100px) {
     .container {
         background-color: white;
         position: relative;
-        width: 80vw;
+        width: 100vw;
         height: inherit;
     }
     .sidebar {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 20px;
-        left: 200px;
+        left: 26%;
         padding: 10px;
         width: 90%;
-        height: 100%;
-        background: none;
+        height: 150%;
         background-image: url('./assets/images/bg-sidebar-mobile.svg');
+        background-size: cover;
     }
     .sidebar ul {
-        padding: 1rem;
+        padding: 0rem;
     }
     .sidebar ul li {
         padding-top: 0;
@@ -539,14 +567,16 @@ border-radius: 50%;
         height: 90vh;
         margin: 10px;
     }
+    
 }
 
 @media screen and (max-width:700px) {
-    .sidebar {
-        left: 100px
+    .sidebar ul li {
+        padding: 0.3rem;
+        margin: 0.5rem;
     }
     .sidebar ul li a::before{
-        left: 62%;
+        left: 60%;
         align-items: center;
     }
     .plans {
@@ -559,7 +589,7 @@ border-radius: 50%;
     }
     .cd {
         width: 90%;
-        height: 5vh;
+        height: 3vh;
         margin: 10px;
         padding: 20px;
         border-radius: 0.5rem;
@@ -574,10 +604,14 @@ border-radius: 50%;
         height: 6vh;
         margin: 10px;
         margin-top: 32px;
+        margin-bottom: 3.5rem;
     }
     .form .sel-btn {
         margin-top: 0;
         margin-bottom: 30px;
+    }
+    .add-ons {
+        margin-bottom:  5.8rem;
     }
 }
 
